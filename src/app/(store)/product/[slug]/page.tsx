@@ -1,3 +1,4 @@
+import { AddToCartButton } from "@/components/add-to-cart-button";
 import { api } from "@/data/api";
 import { Product } from "@/data/types/products";
 import { Metadata } from "next";
@@ -103,12 +104,7 @@ export default async function ProductPage({ params }: ProductProps) {
             </button>
           </div>
 
-          <button
-            className="mt-8 flex h-12 w-full items-center justify-center rounded-full bg-emerald-500 font-semibold px-5"
-            type="button"
-          >
-            Adicionar ao carrinho
-          </button>
+          <AddToCartButton productId={product.id} />
         </div>
       </div>
     </div>
